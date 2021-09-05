@@ -14,12 +14,12 @@ const imageScale=0.3
 
 const pdfDoc = require('pdfkit')
 const fs = require('fs')
-const {   SymbologyType,
+/*const {   SymbologyType,
     OutputType,
     EncodingMode,
-    createFile } =require ('symbology')
+    createFile } =require ('symbology')/*
 const { scale } = require('pdfkit')
-
+*/
 
 const doc = new pdfDoc({ size: [width, height], margins: { top: 0, bottom: 0, left: 0, right: 0 } }/**/)
 
@@ -36,7 +36,7 @@ let title = "ADMIN"
 async function generatePdf(barcode, displayname=null, displayseat=null, title=null, stripes=null) {
     //var qrpng = qr.imageSync(barcode, { type: 'png' , margin: 0, size: 4}) 
     //fs.writeFileSync(`${barcode}.png`,qrpng)
-    const data  = await createFile({
+    /*const data  = await createFile({
         symbology: SymbologyType.QRCODE,
         fileName: `temp/${barcode}.png`,
         showHumanReadableText: false,
@@ -47,6 +47,7 @@ async function generatePdf(barcode, displayname=null, displayseat=null, title=nu
       let barcodeScale=(75/data.width)
 
       console.log(barcodeScale)
+*/
       if(title) {
     doc
         .rect(0, 0, 30, 90).fill('#000')
@@ -63,8 +64,8 @@ async function generatePdf(barcode, displayname=null, displayseat=null, title=nu
     }
         doc
         .save()
-        .scale(barcodeScale)
-        .image(`temp/${barcode}.png`,barcodex/barcodeScale,barcodey/barcodeScale)
+        //.scale(barcodeScale)
+        //.image(`temp/${barcode}.png`,barcodex/barcodeScale,barcodey/barcodeScale)
         .restore()
         .save()
         .scale(imageScale)
