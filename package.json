@@ -1,0 +1,24 @@
+{
+  "name": "braceletgenerator",
+  "version": "1.0.0",
+  "description": "BraceletGenerator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torrilan/braceletgenerator.git"
+  },
+  "author": "Torrilan/Micsen",
+  "license": "AGPLv3",
+  "bugs": {
+    "url": "https://github.com/torrilan/braceletgenerator/issues"
+  },
+  "homepage": "https://github.com/torrilan/braceletgenerator#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "pdfkit": "^0.12.3",
+    "symbology": "^3.0.6"
+  }
+}
